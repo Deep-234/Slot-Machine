@@ -1,0 +1,81 @@
+:root{
+--speed : 12
+}
+body{
+    background-image: url('flame.jpg');
+}
+.machine{
+    background-color: goldenrod;
+     display: flex;
+     margin: 100px 300px;    
+     height: 300px;
+     width: 900px;
+     z-index: 2;
+     border:steelblue dashed 10px;
+     border-radius: 20px;
+}
+.slot{
+    background-color: honeydew;
+    height: 250px;
+    z-index: 1;
+    width: 250px;
+    overflow:hidden;
+    margin: 20px ;
+    border:olive solid 10px;
+    text-align: center;
+    font-size: 80pt;
+    line-height: 250px;
+    border-radius: 20px;
+    
+}
+#inpSpeed{
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 50px;
+    padding: 15px 20px;
+}
+.speed{
+    font-size: 30px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: goldenrod;
+      margin: 5px 35px;
+}
+.slot > .value{
+    display: inline-block;
+     animation-name: slotspin ;
+     animation-iteration-count: infinite;
+    animation-duration: calc(1s/(var(--speed)));
+}
+.Spdcntr{
+    margin: -60px 400px;
+}
+.inpsp{
+    border: solid 2px brown;
+}
+.btn1{
+    margin: 0px 9px;
+    background-color:steelblue;
+    color: wheat;
+    padding: 8px 30px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    cursor: pointer;
+     font-size: 20px;
+     display: inline-block;
+        border: 2px, solid, yellow;
+        position: absolute ;
+        right: 600px;
+        top: 490px;
+}
+.btn1:hover{
+    background-color: teal;
+}
+
+@keyframes slotspin {
+    0%{
+        transform:translateY(-200px)
+    }
+    100%{
+        transform: translatey(200px);
+    }
+}
